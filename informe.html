@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Técnico Hipotecario | Marzo 2026</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23005ce6' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'></path><polyline points='9 22 9 12 15 12 15 22'></polyline></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .report-container { max-width: 1200px; margin: 2rem auto; padding: 3rem; background: var(--surface-color); border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .report-header { display: block; text-align: center; margin-bottom: 3rem; border-bottom: 1px solid var(--border-color); padding-bottom: 2rem; }
+        .report-header h1 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1.5rem; line-height: 1.2; }
+        .report-header p.lead { font-size: 1.2rem; color: var(--text-muted); line-height: 1.6; text-align: left;}
+        .report-content h2 { color: var(--primary-color); margin-top: 4rem; margin-bottom: 2rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--primary-color); font-size: 1.8rem; max-width: 900px; }
+        .report-content h3 { color: var(--text-color); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.3rem; max-width: 900px; }
+        .report-content p { margin-bottom: 1.5rem; color: #334155; line-height: 1.8; font-size: 1.05rem; max-width: 900px; }
+        .report-content ul { margin-bottom: 1.5rem; padding-left: 2rem; margin-top: -0.5rem; }
+        .report-content li { margin-bottom: 0.5rem; color: #334155; line-height: 1.6; font-size: 1.05rem; }
+        table.report-table { width: 100%; border-collapse: collapse; margin: 2.5rem 0; font-size: 0.95rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 6px; overflow: hidden; }
+        table.report-table th, table.report-table td { padding: 1rem; border: 1px solid var(--border-color); text-align: left; vertical-align: top; }
+        table.report-table th { background: #f8fafc; font-weight: 600; color: var(--text-color); }
+        table.report-table tr:nth-child(even) { background-color: #fafafa; }
+        .nav-header { display: flex; justify-content: flex-start; gap: 2rem; margin-top: 1.5rem; }
+        .nav-link { text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 1.05rem; padding: 0.5rem 0; border-bottom: 2px solid transparent; transition: all 0.2s; }
+        .nav-link:hover { color: var(--primary-color); }
+        .nav-link.active { color: var(--primary-color); border-bottom-color: var(--primary-color); }
+        .alert { padding: 1.5rem 1.5rem; border-left: 4px solid var(--primary-color); background: #f0f7ff; margin: 2rem 0; font-style: italic; color: #1e293b; line-height: 1.6; }
+        .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 3rem; text-align: left; }
+        @media (max-width: 800px) { .intro-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 style="font-size: 1.5rem;">Inteligencia Inmobiliaria</h1>
+            <nav class="nav-header">
+                <a href="index.html" class="nav-link">Simulador Inteligente</a>
+                <a href="informe.html" class="nav-link active">Informe Técnico (Marzo 2026)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="report-container">
+            <header class="report-header">
+                <h1>El Mercado Hipotecario Español en 2026: Transformación y Viabilidad Cruzada</h1>
+                
+                <div class="intro-grid">
+                    <div>
+                        <p class="lead" style="margin-bottom: 1.5rem;">El mercado inmobiliario y el sector de la financiación hipotecaria en España atraviesan, a fecha de marzo de 2026, un periodo de profunda transformación estructural y reajuste macroeconómico. Tras varios ejercicios marcados por la restricción monetaria, el escenario actual dibuja una clara tendencia hacia la flexibilización.</p>
+                        <p class="lead">La corrección a la baja ha desencadenado una intensa guerra comercial bancaria que, si bien comprime márgenes ofreciendo TINs atractivos, esconde complejas matrices de vinculación en la TAE. En paralelo, la crisis de accesibilidad ha forzado una intervención sin precedentes de las administraciones públicas mediante avales y subvenciones estructurales.</p>
+                    </div>
+                    <div class="alert" style="margin: 0; border-radius: 6px; font-size: 1.1rem;">
+                        <strong>🔑 El punto de inflexión del ciclo:</strong><br><br>
+                        Este cambio tiene su reflejo más evidente en la cotización del euríbor a doce meses, que a mediados de marzo de 2026 ha consolidado su senda bajista, situándose en un promedio provisional que oscila entre el <strong>2,383% y el 2,407%</strong>.
+                    </div>
+                </div>
+            </header>
+
+            <article class="report-content">
+                <h2>1. Mapa Completo y Análisis Estructural de Hipotecas en España</h2>
+                <p>El panorama hipotecario refleja una sofisticada diversificación del riesgo. La clave analítica no reside exclusivamente en el reclamo publicitario del TIN, sino en la comprensión profunda de la TAE y el concepto del "peaje de vinculación". Los bancos exigen una alta penetración de productos cruzados (cross-selling) para aplicar las bonificaciones máximas.</p>
+
+                <h3>Vectores Estratégicos por Tipología de Producto</h3>
+                <ul>
+                    <li><strong>Hipotecas a tipo fijo:</strong> Regresan para perfiles conservadores. La barrera psicológica se sitúa entre 2,00% al 2,50% TIN. Unicaja e Ibercaja lideran con tipos base del 2,00% y 2,20%. BBVA penaliza plazos de 30 años subiendo al 2,85%.</li>
+                    <li><strong>Hipotecas mixtas:</strong> Diseñadas para blindar al banco contra la caída actual del euríbor. Suelen ofrecer tramos fijos iniciales atractivos a 3 o 5 años (como ING al 2,40%) transicionando a diferenciales estándar.</li>
+                    <li><strong>Hipotecas variables:</strong> Resurgen como viables con euríbor del 2,38%. Entidades como MyInvestor u Openbank ofrecen diferenciales de euríbor + 0,55%. A menudo neutralizados por un TIN fijo el primer año artificialmente alto (ej. CaixaBank al 2,70%).</li>
+                </ul>
+
+                <h3>La Matriz de Vinculaciones y su Impacto</h3>
+                <p>El modelo se sustenta en el TIN actuando como "gancho". Para alcanzar un Euríbor + 0,70% con Kutxabank, se exigen seguros y aportaciones a planes de pensiones (coste devengado: ~900€/año), propulsando la TAE real al 3,40%. Santander usa bonificaciones atípicas modulares: descuentos por alarmas propias (-0,20%) o tarjetas de crédito revolving periódicas (-0,05%).</p>
+                <p>Respecto al Loan-to-Value (LTV), la política comercial de riesgo LTV general se mantiene en el 80%. Para alcanzar financiaciones del 95% o 100%, se recurre invariablemente a Avales Públicos, propiedades REO del propio banco (Pisos de bancos), o clientes de altísima solvencia canalizados por brókers especializados.</p>
+
+                <h3>Tabla Comparativa Integral de Oferta Comercial (Marzo 2026)</h3>
+                <div style="overflow-x: auto;">
+                    <table class="report-table">
+                        <thead>
+                            <tr>
+                                <th>Entidad</th>
+                                <th>Hipoteca Fija (TIN óptimo)</th>
+                                <th>Variable (Euríbor +)</th>
+                                <th>Vinculaciones Clave exigidas</th>
+                                <th>Observaciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Unicaja</strong></td><td>2,00% TIN / 1,95% TAE</td><td>Euríbor + 0,85%</td><td>Nómina, seguro hogar/vida (Peso 1%)</td><td>Adherida a Avales ICO. Fuertes rebajas recientes.</td></tr>
+                            <tr><td><strong>Ibercaja</strong></td><td>2,20% TIN</td><td>Euríbor + 0,60%</td><td>Nómina, hogar, vida, fondo inversión (75€/mes)</td><td>Programa "Vamos Joven". Ayudas Autonómicas.</td></tr>
+                            <tr><td><strong>CaixaBank</strong></td><td>Desde 2,30% TIN</td><td>Euríbor + 0,50%</td><td>Nómina, hogar, vida, Alarmas Securitas</td><td>Principal colocador de Avales ICO por volumen de red.</td></tr>
+                            <tr><td><strong>BBVA</strong></td><td>2,75% a 2,85% TIN</td><td>Euríbor + Variable</td><td>Nómina, Multirriesgo hogar, protección pagos</td><td>Penaliza hipotecas largas a tipo fijo. Fuertes en jóvenes al 95%.</td></tr>
+                            <tr><td><strong>Santander</strong></td><td>Desde 2,60% TIN</td><td>No promocionada</td><td>Nómina, seguros, Alarmas (-0,2%), Tarjetas</td><td>Matriz modular súper agresiva e ICO activo.</td></tr>
+                            <tr><td><strong>ING</strong></td><td>Sin Fija a largo</td><td>Euríbor + 0,80%</td><td>Nómina, seguro hogar/vida</td><td>Sin inversión de riesgo obligatoria. Tramo inicial alto.</td></tr>
+                            <tr><td><strong>Openbank</strong></td><td>Desde 2,76% TIN</td><td>Euríbor + 0,55%</td><td>Nómina, hogar básico</td><td>Cero comisiones extra. Política ultra limpia.</td></tr>
+                            <tr><td><strong>Kutxabank</strong></td><td>Sujeto a negociación</td><td>Euríbor + 0,70%</td><td>Nómina, seguros, plan pensiones fuerte</td><td>Hipotecas Verdes y gran encarecimiento en TAE real final.</td></tr>
+                            <tr><td><strong>MyInvestor</strong></td><td>Revisión constante</td><td>Euríbor + 0,55%</td><td>Ninguna obligatoria explícita</td><td>Solo perfiles alta solvencia > 4000€ netos/mes.</td></tr>
+                            <tr><td><strong>Bankinter</strong></td><td>Variable según link</td><td>A consultar</td><td>Nómina, seguros línea directa</td><td>Apoyo fuerte en perfiles jóvenes y particulares VIP.</td></tr>
+                            <tr><td><strong>Abanca</strong></td><td>Escalonada</td><td>Revisión semestral</td><td>Nómina, seguros propios matrix</td><td>Implantación "Mi Primera Vivienda" y Línea ICO menores 35.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>2. Escudo de Protección Pública: Ayudas, Subvenciones y Avales</h2>
+                <p>El Estado y las CCAA han girado a intervenciones quirúrgicas directas hacia el problema insalvable del ahorro (Entrada 20% + Impuestos 10%), inalcanzable para jóvenes debido a las tasas de emancipación rezagadas.</p>
+
+                <h3>Línea de Avales ICO del 20% (Vigente hasta Dic 2027)</h3>
+                <ul>
+                    <li><strong>Naturaleza:</strong> El ICO avala el 20% del valor. El banco asume el riesgo 100% sobre el inmueble ya que un quinto está garantizado soberanamente.</li>
+                    <li><strong>Elegibilidad:</strong> Menores de 36 años, o Familias con menores a cargo (sin límite de edad en padres).</li>
+                    <li><strong>Rentas topadas:</strong> Ingresos < 37.800€ brutos (4,5 IPREM). Parejas o matrimonios acumulan hasta 75.600€. Cada hijo suma +2.520€. Si es familia monoparental, el límite base sube un poderoso +70%.</li>
+                    <li><strong>Patrimonio:</strong> Inferior a 100.000€ de patrimonio neto preexistente.</li>
+                    <li><strong>Adendas Verdes:</strong> Si la eficiencia de compra es letra D o superior, el aval ICO escala hasta cubrir un asombroso 25%.</li>
+                    <li><strong>Entidades:</strong> Lideran CaixaBank, Santander, BBVA, Sabadell y Bankinter.</li>
+                </ul>
+
+                <h3>Plan Estatal 2026-2030 (Subvenciones Reto Demográfico)</h3>
+                <p>Orientado a la "España Vaciada". <strong>Subvención directa a fondo perdido de hasta 10.800€</strong> si compras en un municipio de menos de 10.000 habitantes. Límite de la vivienda: 120.000€. Edad < 35 años. Ingresos por debajo de 3x IPREM (ajustable hasta 5x IPREM para Discapacidad / Numerosa Especial).</p>
+
+                <h3>Asimetrías Fiscales Autonómicas (ITP) y Garantías Cruzadas</h3>
+                <p>La cesión de tributos rompe la unidad de mercado, generando penalizaciones o enormes ahorros geográficos según residencia.</p>
+                <div style="overflow-x: auto;">
+                    <table class="report-table">
+                        <thead>
+                            <tr>
+                                <th>Comunidad Autónoma</th>
+                                <th>Programas de Aval Complementario</th>
+                                <th>Trato Fiscal Integral (ITP)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Madrid</strong></td>
+                                <td>"Mi Primera Vivienda" amparando avales hasta el 95% para < 35 años a través de redes bancarias.</td>
+                                <td>General: 6%. (10% descuento final adicional para menores de 35 si vivienda < 250k€).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cataluña</strong></td>
+                                <td>Avales ICF (Generalitat asume garantía 20%), gestionado directo.</td>
+                                <td>Punitivo General: 10%. Rebajado a 5% exclusivo jóvenes < 32 años (sujeto a rentas limitadas).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Com. Valenciana</strong></td>
+                                <td>IVF lidera coberturas integrales y ágiles hasta 100% financiables. Alcanza a ciudadanos hasta 45 años.</td>
+                                <td>General 10%. Cae 8% (Primera Vivienda < 35 años). Cae fulminante a 4% Familia Numerosa, Discapacidad y Monoparentales.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Andalucía</strong></td>
+                                <td>Garantía Vivienda Joven de la Junta (Cubre subsidiariamente +15%).</td>
+                                <td>General 7%. Minorado drásticamente a 3,5% si se tienen < 35 años y valor < 150.000€.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Castilla y León</strong></td>
+                                <td>Plan TUYA / SOMACYL avala el 17,5% adicional logrando hipotecas al 97,5% inmerso.</td>
+                                <td>General 8%. Rebajado a 5% (Jóvenes < 36 años y planes agrarios demográficos).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>País Vasco / Navarra</strong></td>
+                                <td>Haciendas Forales manejan acceso directo desde DIPUTACIONES.</td>
+                                <td>Paraíso Fiscal interno: PB (4%) y Navarra (5%). Ausencia total de trabas de penalización LTV al tener fiscalidad base barata.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Resto (Murcia, IB, GAL, AST)</strong></td>
+                                <td>IBAVI financia Baleares (100% sobre largas residencias). </td>
+                                <td>Baleares (8 al 13%), Galicia (9%), Asturias rebaja ITP al 3% bajo límites vivienda. Murcia baja general (8%) a jóvenes y autónomos (3%).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>3. Oligopolio Servicers: El Stock del REO Bancario</h2>
+                <p>La alternativa inmediata para acceder a "Hipotecas al 100%" sin ataduras de los avals estatales, es comprar activos que los bancos acumulan tras embargos, denominados Real Estate Owned (REO). Al banco le interesa limpiarlos de su balance y financia hasta notaría de forma agresiva.</p>
+                <ul>
+                    <li><strong>Altamira (doValue):</strong> Nacida de Santander, gestiona carteras inmensas residenciales.</li>
+                    <li><strong>Servihabitat (Lonestar):</strong> Histórica de CaixaBank, vende promociones rehabilitadas.</li>
+                    <li><strong>Solvia (Intrum):</strong> Excisión Sabadell. Enorme densidad costera.</li>
+                    <li><strong>Haya Real Estate:</strong> Opera la órbita de BBVA/CBK para NPLs y REO masivo minorista.</li>
+                    <li><strong>Kutxabank / Ibercaja Portales:</strong> Entidades que ligan la pre-hipoteca al mismo inmueble listado virtualmente en su portal.</li>
+                </ul>
+                <p>Comprando aquí el LTV no queda encorsetado formalmente al 80% tradicional.</p>
+
+                <h2>4. Brokers y Plataformas de Originación Hipotecaria</h2>
+                <p>El mercado ha evolucionado de las marquesinas a los intermediarios que negocian asimétricamente el poder frente a las áreas de riesgo bancario. Se bifurcan en modelos gratuitos (Kick-backs) y plataformas de alto valor pago-por-cierre.</p>
+                <ul>
+                    <li><strong>Gratuitos y Digitalizers (iAhorro, Trioteca, Rastreator):</strong> Redes impulsadas B2B2C. Absorben comisiones del banco origente. Aceleran perfiles nítidos, seguros de vida limpios y un 20% aportado intocable de base.</li>
+                    <li><strong>Honorarios Explícitos (RN, Housfy, ACFINAN):</strong> Exigen tarifas iniciales que varían entre 3.000€ - 5.990€. Trabajan operativas letales para perfiles imposibles: LTVs superando 100%, reestructuraciones macro a plazos extremos, pignoraciones cruzadas corporativas y clientes autónomos con complejas marañas societarias. Son imprescindibles ante ratios bancarios "Debt to Income (DTI)" superados por asfixia.</li>
+                </ul>
+
+                <h2 style="border:none; margin-top:4rem;">5. Conclusiones Técnicas del Análisis</h2>
+                <div class="alert" style="background:var(--bg-color); border-color:var(--text-color);">
+                    <p>La mera exposición tabular del TIN ofertado por el oligopolio en 2026 deviene en un espejismo superficial ineficaz. Para desencriptar la realidad patrimonial y el límite fiduciario de entrada y viabilidad familiar, se requiere imperativamente de la intersección algorítmica de tres fuerzas matrices: la renta líquida DTI vs LTV bancario encorsetado (80%), el despliegue del escudo público garantizado de avales como inyección líquida mitigante, y la severa pero calculable e intervencionista red fiscal descentralizada del Impuesto ITP, la TAE paralela oculta por la vinculación exigida impuesta por matriz de seguro obligado y riesgo DTI asfixiando.</p>
+                    <p>En este ecosistema laberíntico de viabilidad, la arquitectura web exigirá forzosamente integrar simuladores potentes de "viabilidad cruzada" sobre la base real macroeconómica dispuesta.</p>
+                </div>
+
+            </article>
+        </main>
+        <footer>
+            <p>Construyendo el futuro inmobiliario de forma inteligente y segura | Mayo 2026</p>
+        </footer>
+</body>
+</html>

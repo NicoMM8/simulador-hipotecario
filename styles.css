@@ -1,0 +1,572 @@
+:root {
+    --bg-color: #f7f9fa; /* Light grey background similar to Sabadell */
+    --surface-color: #ffffff; /* White cards */
+    --text-color: #1a1a1a;
+    --text-muted: #5e6c84; /* Darker grey for secondary text */
+    --primary-color: #005ce6; /* Sabadell Blue */
+    --primary-hover: #004bbd; /* Darker Blue */
+    --accent-color: #00A388; /* Sabadell Green Accent */
+    --border-color: #e2e8f0;
+    --input-bg: #ffffff;
+    --danger-color: #d32f2f;
+    --danger-bg: #fdeceb;
+    --warning-color: #ed8e00;
+    --warning-bg: #fff5e6;
+    --success-color: #0b8a4f;
+    --success-bg: #e6f6ec;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    padding: 0; /* Reset padding for full width header */
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header styling */
+header {
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 2rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.main-split {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+@media (max-width: 1024px) {
+    .main-split {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* White clean panels */
+.panel {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px; /* Softer radius for corporate look */
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.75rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: var(--input-bg);
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.input-suffix {
+    position: absolute;
+    right: 1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 92, 230, 0.15);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.form-group small.warning {
+    color: var(--danger-color);
+    background: var(--danger-bg);
+    padding: 0.75rem;
+    border-radius: 6px;
+    border-left: 4px solid var(--danger-color);
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+}
+
+.checkbox-label {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    cursor: pointer;
+    line-height: 1.4;
+    user-select: none;
+}
+
+/* Range slider styling */
+input[type="range"] {
+    width: 100%;
+    accent-color: var(--primary-color);
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 3px;
+    outline: none;
+    appearance: none;
+    margin-top: 0.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+}
+
+.range-value {
+    text-align: right;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+/* Buttons */
+.btn-primary {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Summary Panel */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 4px solid var(--primary-color);
+}
+
+.card#loan-card { border-left-color: var(--primary-color); }
+.card:nth-child(2) { border-left-color: var(--warning-color); }
+.card:nth-child(3) { border-left-color: var(--accent-color); }
+
+.card h3 {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.card p.highlight {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+.card small {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Results header */
+.mortgage-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.mortgage-list-header h2 {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+}
+
+.filters {
+    display: flex;
+    gap: 0.5rem;
+    background-color: #f1f5f9;
+    padding: 0.25rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.filter-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+    color: var(--text-color);
+}
+
+.filter-btn.active {
+    background-color: white;
+    color: var(--primary-color);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Mortgage Item styled like corporate cards */
+.mortgage-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.mortgage-item {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.mortgage-item.denied {
+    opacity: 0.6;
+    background-color: #fafafa;
+}
+
+.mortgage-item:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+}
+
+.mortgage-item.denied:hover {
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.bank-info {
+    flex: 1 1 200px;
+}
+
+.bank-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mortgage-type {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+/* Rates layout */
+.rates {
+    display: flex;
+    gap: 2rem;
+    flex: 1 1 250px;
+    justify-content: center;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    padding: 0 2rem;
+    margin: 0 1.5rem;
+}
+
+.rate-box {
+    text-align: center;
+}
+
+.rate-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.rate-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.1rem;
+    font-weight: 500;
+}
+
+/* Payment Layout */
+.payment-info {
+    text-align: right;
+    flex: 1 1 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.monthly-payment {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.monthly-payment.danger {
+    color: var(--danger-color);
+}
+
+.payment-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Corporate Badges */
+.req-badge {
+    display: inline-block;
+    background-color: #f1f5f9;
+    color: var(--text-muted);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+    border: 1px solid #e2e8f0;
+}
+
+.req-badge.error {
+    background-color: var(--danger-bg);
+    color: var(--danger-color);
+    border-color: #fca5a5;
+    margin-top: 0.5rem;
+}
+
+.req-badge.warning {
+    background-color: var(--success-bg);
+    color: var(--success-color);
+    border-color: #a7f3d0;
+    margin-top: 0.5rem;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--text-muted);
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    border: 1px dashed var(--border-color);
+    font-size: 1rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Navigation Header */
+.nav-header { display: flex; justify-content: flex-start; gap: 2rem; margin-top: 1rem; }
+.nav-link { text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 1.05rem; padding: 0.5rem 0; border-bottom: 2px solid transparent; transition: all 0.2s; }
+.nav-link:hover { color: var(--primary-color); }
+.nav-link.active { color: var(--primary-color); border-bottom-color: var(--primary-color); }
+
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none !important;
+}
+
+.modal-content {
+    background: var(--surface-color);
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    background: #f8fafc;
+}
+
+.modal-header h2 { margin: 0; font-size: 1.25rem; }
+
+.close-btn {
+    background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-muted); padding: 0.5rem; line-height: 1; border-radius: 4px; transition: background 0.2s;
+}
+
+.close-btn:hover {
+    background: #e2e8f0; color: var(--text-color);
+}
+
+.table-container {
+    padding: 0;
+    overflow-y: auto;
+}
+
+#amortization-table {
+    width: 100%; border-collapse: collapse; text-align: right;
+}
+
+#amortization-table th, #amortization-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#amortization-table th { background: white; position: sticky; top: 0; color: var(--text-muted); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+#amortization-table tr:hover { background-color: #f8fafc; }
+
+@media (max-width: 900px) {
+    .mortgage-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+    .payment-info {
+        text-align: center;
+        align-items: center;
+        border-top: 1px solid var(--border-color);
+        padding-top: 1.5rem;
+    }
+    .rates {
+        justify-content: space-around;
+        padding: 1.5rem 0;
+        margin: 0;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+    }
+    header { padding: 1.5rem; }
+    .app-container { padding: 0 1rem; }
+}
